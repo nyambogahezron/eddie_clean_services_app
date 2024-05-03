@@ -1,5 +1,5 @@
-import HeroImg from "../../../assets/images/bg3.jpg";
-import SwipperCon from "./Swipper";
+import { Link } from "react-router-dom";
+import SwiperContainer from "./SwiperContainer ";
 const HeroSection = () => {
   return (
     <section className='hero-section'>
@@ -13,16 +13,16 @@ const HeroSection = () => {
           refreshed environment every time.
         </p>
         <div className='buttons'>
-          <a href='#' className='join'>
-            Join Now
-          </a>
-          <a href='#' className='learn'>
-            Learn More
-          </a>
+          <Link to='#services' className='join'>
+            Services
+          </Link>
+          <Link to='#contactUs' className='learn'>
+            Contact Us
+          </Link>
         </div>
       </div>
       <div className='img'>
-        <img src={HeroImg} alt='hero image' />
+        <SwiperContainer />
       </div>
     </section>
   );
