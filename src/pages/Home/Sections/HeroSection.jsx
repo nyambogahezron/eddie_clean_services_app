@@ -1,12 +1,16 @@
+import HeroImg from "../../../assets/images/bg3.jpg";
+import SwipperCon from "./Swipper";
 const HeroSection = () => {
   return (
     <section className='hero-section'>
       <div className='hero'>
-        <h2>Mobile App Development</h2>
+        <h2>Eddie Clean Services</h2>
         <p>
-          Join us in the exciting world of programming and turn your ideas into
-          reality. Unlock the world of endless possibilities - learn to code and
-          shape the digital future with us.
+          Welcome to Eddie Cleaners, where we transform your space into a
+          pristine sanctuary. Our professional team specializes in meticulous
+          cleaning services tailored to your needs. With eco-friendly practices
+          and unparalleled attention to detail, we promise a sparkling,
+          refreshed environment every time.
         </p>
         <div className='buttons'>
           <a href='#' className='join'>
@@ -18,7 +22,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className='img'>
-        <img src='hero-bg.png' alt='hero image' />
+        <img src={HeroImg} alt='hero image' />
       </div>
     </section>
   );
