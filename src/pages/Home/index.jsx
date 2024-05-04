@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import HeroBottom from "./Sections/HeroBottom";
 import HeroSection from "./Sections/HeroSection";
 const Home = () => {
   return (
@@ -6,9 +7,16 @@ const Home = () => {
       <header className='header'>
         <Navbar />
       </header>
-      <div>
-        <HeroSection />
-      </div>
+      <main>
+        <section className='home' id='home'>
+          <div>
+            <HeroSection />
+          </div>
+          <div className='hero-panel'>
+            <HeroBottom />
+          </div>
+        </section>
+      </main>
     </>
   );
 };

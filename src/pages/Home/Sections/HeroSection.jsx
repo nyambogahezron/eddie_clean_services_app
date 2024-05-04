@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import SwiperContainer from "./SwiperContainer ";
 const HeroSection = () => {
   return (
-    <section className='hero-section'>
+    <div className='hero-section'>
       <div className='hero'>
         <h2>Eddie Clean Services</h2>
         <p>
@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className='img'>
         <SwiperContainer />
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
+/* ***********
+-------------- GLOBAL CSS -------------------
+*************/
+
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +12,12 @@
 }
 
 body {
+  position: relative;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
   background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+  overflow-x: hidden;
 }
 
 html {
@@ -34,12 +41,21 @@ section {
   height: 100%;
   width: 100vw;
   margin-bottom: 40px;
+  overflow-x: hidden;
 }
+
+/* ***********
+-------------- HOME SECTION -------------------
+*************/
+
+/* Navbar CSS */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 99;
+  background-color: #175d69;
 }
 
 .navbar {
@@ -108,6 +124,8 @@ section {
   background-color: #47b2e4;
   color: #fff;
 }
+
+/* Hero Section */
 
 .hero-section {
   display: flex;
@@ -183,6 +201,7 @@ section {
 }
 
 /* Hamburger menu styles */
+
 #menu-toggle {
   display: none;
 }
@@ -231,5 +250,102 @@ section {
 
   .swipperContainer {
     display: none;
+  }
+}
+
+/* Home bottom hero */
+
+.hero-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: -30px auto 30px auto;
+  padding: 10px 5px;
+  align-items: center;
+  background: url('./assets/images/bg2.jpg');
+  background-position: center;
+}
+.hero-panel .wrapper {
+  display: grid;
+  margin: 0 150px auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1135px) {
+  .hero-panel .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hero-panel .wrapper .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  width: 350px;
+  background: #f3f3f3;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  margin: 0 auto;
+  box-shadow: 5px 2px 0px rgb(116, 116, 199);
+}
+@media (max-width: 750px) {
+  .hero-panel .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hero-panel .wrapper .box{
+    width: 500px;
+  }
+}
+.hero-panel .wrapper .box:hover {
+  box-shadow: none;
+  background: #dfd5d5;
+  border: 2px solid rgb(116, 116, 199);
+}
+
+.hero-panel .box .icon {
+  height: 80px;
+}
+.hero-panel .box .icon svg {
+  font-size: 65px;
+  color: #47b2e4;
+}
+.hero-panel .wrapper .box:hover .icon svg {
+  color: #2a254f;
+}
+
+.hero-panel .box span {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero-panel .box .icon svg,
+.hero-panel .box span {
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 630px) {
+  .hero-panel .wrapper {
+    margin: 0;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0 5px;
+  }
+  .hero-panel .wrapper .box {
+    width: 100%;
+  }
+  .hero-panel .box .icon {
+    height: 50px;
+  }
+  .hero-panel .box .icon svg {
+    font-size: 40px;
+  }
+  .hero-panel .box span{
+    font-size: 18px;
   }
 }
