@@ -425,7 +425,6 @@ section {
   box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
   -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
   -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
-  
 }
 
 #aboutUs .container .about-left-content .icons {
@@ -454,10 +453,10 @@ section {
   color: #000;
 }
 
-/* about content right  */
+/********* about content right  ***********/
 
 #aboutUs .container .about-right {
-  background: #175D69;
+  background: #175d69;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -476,45 +475,53 @@ section {
 }
 
 #aboutUs .container .about-right .text-container {
-  margin: 10px 30px 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
 }
 .about-right .about-text {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: start;
-  text-align: start;
+  text-align: center;
   border-left: 5px solid rgb(71, 128, 71);
   padding: 20px 10px;
   font-size: 1em;
-  line-height: 1.8;
+  line-height: 2.6;
   color: #f3f3f3;
-  background: #5c8c94;
+  background: #2f4f4f;
   box-shadow: 2px 3px 0 #7e7e7e;
+  margin-left: -30px;
+  z-index: 10;
 }
 
 .about-info {
   margin-top: 30px;
-  width: 100%;
+  background: linear-gradient(to left, #175d69 40%, #317a87  75%);
+  padding: 20px 0;
 }
 .about-info .wrapper {
+  width: 80%;
+  margin: 0 auto;
   padding: 15px 5px;
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
 }
 @media screen and (max-width: 899px) {
   .about-info .wrapper {
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
   }
 }
 
 @media screen and (max-width: 700px) {
   .about-info .wrapper {
-  grid-template-columns: repeat(1, 1fr);
-  row-gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
   }
 }
 
@@ -527,7 +534,7 @@ section {
   width: 250px;
   height: 200px;
   margin: 0 auto;
-  background: #5c8c94;
+  background: #2f4f4f;
   box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
   transition: all 0.5s ease;
 }
@@ -552,8 +559,9 @@ section {
 .about-info .wrapper .item p {
   font-size: 0.9rem;
   color: #f3f3f3;
-} 
-
+  text-align: center;
+  line-height: 2.3;
+}
 
 @media screen and (max-width: 991px) {
   #aboutUs .container .about-left-content {
@@ -561,18 +569,19 @@ section {
     padding: 0 10px;
   }
   #aboutUs .container .about-right {
-    margin-top: 20px;
     width: 100%;
-    padding: 0 10px;
   }
-  #aboutUs .container .about-left-content > div{
+  #aboutUs .container .about-left-content > div {
     width: 100%;
     padding: 0 20px;
   }
-  #aboutUs .container .about-right .text-container{
+  #aboutUs .container .about-right .text-container {
     margin: 0;
   }
-  
+  #aboutUs .container .about-text {
+    margin-left: 0;
+    border: none;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -591,3 +600,89 @@ section {
     padding-left: 4rem;
   }
 }
+
+/******** Company Values style ********/
+
+.about-values {
+  padding: 5px 10px;
+  background: #175d69;
+  margin-top: -15px;
+}
+.about-values .list-container .title h1{
+  position: relative;
+  margin-left: 20px;
+  font-size: 1.3rem;
+  font-family: cursive;
+  text-transform: capitalize;
+  color: #f3f3f3;
+}
+
+.about-values .list-container .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media screen and (max-width: 630px) {
+  .about-values .list-container .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.about-values .list-container .wrapper .list-item {
+  background: #2F4F4F;
+}
+.list-item .heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list-item .heading .number {
+  padding: 0.5rem 1rem;
+  background-color: #f56565;
+  color: white;
+  border-radius: 9999px;
+}
+
+.list-item .heading .title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f3f3f3;
+}
+
+.list-item .content .description {
+  padding: 12px 0;
+  font-size: 1rem;
+  color: #718096;
+}
+
+@media (min-width: 768px) {
+  .list-item {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .list-item .content .title {
+    display: block;
+  }
+}
+
+.list-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-item {
+  flex: 0 0 48%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.list-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 20px rgba(204, 201, 201, 0.2);
+}
+

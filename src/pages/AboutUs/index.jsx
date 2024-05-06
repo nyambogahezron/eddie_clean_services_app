@@ -1,3 +1,4 @@
+import CompanyValues from "../../components/AboutUsValues";
 import PageTitle from "../../components/PageTitle";
 // import AboutUsImg from "../../assets/images/bg1.jpg";
 import {
@@ -38,41 +39,47 @@ const AboutUs = () => {
               <div className='wrapper'>
                 <div className='about-text'>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Totam, perferendis corporis! Sit, iusto. Soluta ducimus
-                    eaque natus dolorum quia qui, facere debitis odit accusamus
-                    dicta officia quis atque rerum. Voluptatem aspernatur in
-                    illum ea quaerat vel voluptas assumenda consequuntur quidem!
-                    Pariatur cum autem voluptas velit perferendis asperiores
-                    quibusdam ipsa tempore voluptatibus sint. Aliquam odio magni
-                    dolor numquam eligendi vitae voluptates nesciunt id atque et
-                    tempora, aut labore molestias vel expedita placeat
-                    consectetur cum sequi. Sapiente reprehenderit labore,
-                    doloremque debitis, officiis totam quos aut cumque odio
-                    quaerat, est maxime architecto vero. Pariatur, hic? Soluta
-                    fugiat modi odio quas deleniti. Repellat, exercitationem.
+                    {`
+                    Eddie Clean Services is a premier cleaning services
+                    provider, distinguished by our founder Eddie's unwavering
+                    commitment to excellence. With a dedicated team and years of
+                    industry experience, we specialize in delivering top-notch
+                    cleaning solutions tailored to meet our clients' diverse
+                    needs. From residential to commercial spaces, Eddie Clean
+                    Services ensures every environment shines with unparalleled
+                    cleanliness, making us the trusted choice for transformable
+                    cleaning experiences.`}
                   </p>
-                </div>
-                <div className='about-info'>
-                  <div className='wrapper'>
-                    <div className='item'>
-                      <h2>Motto</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                    <div className='item'>
-                      <h2>Version</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                    <div className='item'>
-                      <h2>Mission</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className='about-info'>
+        <div className='wrapper'>
+          <div className='item'>
+            <h2>Motto</h2>
+            <p>Where Cleanliness Becomes a Lifestyle.</p>
+          </div>
+          <div className='item'>
+            <h2>Mission </h2>
+            <p>
+              Our goal is to be the most trusted, commercial cleaning company in
+              the great East Africa. Our principles reflect this.
+            </p>
+          </div>
+          <div className='item'>
+            <h2>Vision</h2>
+            <p>
+              To become the most trusted, respected, and reliable commercial
+              cleaning company in E.A
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className='about-values'>
+        <CompanyValues />
       </div>
     </section>
   );
