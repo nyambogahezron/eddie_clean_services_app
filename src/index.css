@@ -501,7 +501,7 @@ section {
 
 .about-info {
   margin-top: 30px;
-  background: linear-gradient(to left, #175d69 40%, #317a87  75%);
+  background: linear-gradient(to left, #175d69 40%, #317a87 75%);
   padding: 20px 0;
 }
 .about-info .wrapper {
@@ -608,7 +608,7 @@ section {
   background: #175d69;
   margin-top: -15px;
 }
-.about-values .list-container .title h1{
+.about-values .list-container .title h1 {
   position: relative;
   margin-left: 20px;
   font-size: 1.3rem;
@@ -628,7 +628,7 @@ section {
   }
 }
 .about-values .list-container .wrapper .list-item {
-  background: #2F4F4F;
+  background: #2f4f4f;
 }
 .list-item .heading {
   display: flex;
@@ -686,3 +686,73 @@ section {
   box-shadow: 0px 0px 20px rgba(204, 201, 201, 0.2);
 }
 
+/* ***********
+-------------- HOME SECTION -------------------
+************* SERVICES US ************************
+*************/
+
+#services {
+  border: 1px solid red;
+  margin-top: 35px;
+}
+
+#services .container {
+  width: 95%;
+}
+
+#services .container .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+#services .container .item {
+  background: #edffec;
+  width: calc(33.33% - 10px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  outline: none;
+  padding: 2px;
+}
+
+@media screen and (max-width: 899px) {
+  #services .container .item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #services .container .item,
+  #services .container {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+#services .container .item .thumbnail img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: auto;
+  transition: 0.3s all ease;
+}
+#services .container .item .thumbnail img:hover {
+  opacity: 0.8;
+}
+
+#services .container .item .text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+#services .container .item .text h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+#services .container .item .text p {
+  font-size: 0.855rem;
+  line-height: 1.6;
+}
