@@ -16,7 +16,8 @@ body {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
-  background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+  min-width: 100%;
+  background: #175d69;
   overflow-x: hidden;
 }
 
@@ -30,13 +31,13 @@ a {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
   margin: 0 auto;
   padding: 0 20px 40px 20px;
   max-width: 1600px;
 }
 section {
+  max-width: 100%;
   min-height: 100vh;
   height: 100%;
   width: 100vw;
@@ -44,9 +45,50 @@ section {
   overflow-x: hidden;
 }
 
+/* Home section  page title */
+
+.title-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 5px;
+  margin: 20px 0 30px 20px;
+}
+
+.title-text {
+  position: relative;
+  font-size: 2.2em;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.title-text::before {
+  position: absolute;
+  content: "";
+  background: rgb(194, 83, 83);
+  width: 70px;
+  height: 4px;
+  right: -80px;
+  bottom: 17px;
+}
+
+@media (max-width: 600px) {
+  .title-text {
+    font-size: 1.5em;
+  }
+}
+
 /* ***********
 -------------- HOME SECTION -------------------
 *************/
+#home {
+  background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+}
 
 /* Navbar CSS */
 .header {
@@ -263,7 +305,7 @@ section {
   margin: -30px auto 30px auto;
   padding: 10px 5px;
   align-items: center;
-  background: url('./assets/images/bg2.jpg');
+  background: url("./assets/images/bg2.jpg");
   background-position: center;
 }
 .hero-panel .wrapper {
@@ -295,7 +337,7 @@ section {
   .hero-panel .wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
-  .hero-panel .wrapper .box{
+  .hero-panel .wrapper .box {
     width: 500px;
   }
 }
@@ -345,7 +387,207 @@ section {
   .hero-panel .box .icon svg {
     font-size: 40px;
   }
-  .hero-panel .box span{
+  .hero-panel .box span {
     font-size: 18px;
+  }
+}
+
+/* ***********
+-------------- HOME SECTION -------------------
+************* ABOUT US ************************
+*************/
+
+#aboutUs {
+  margin-bottom: 30px;
+  background: linear-gradient(
+    to top,
+    rgba(46, 49, 65, 0.8),
+    rgba(31, 31, 35, 0.8)
+  );
+}
+
+#aboutUs .container .about-left {
+  background: #233857;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#aboutUs .container .about-left-content > div {
+  height: 600px;
+  width: 500px;
+  background-image: url("../src/assets/images/bg2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#aboutUs .container .about-left-content {
+  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+  
+}
+
+#aboutUs .container .about-left-content .icons {
+  background: #233857;
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+}
+#aboutUs .container .about-left-content .icons li {
+  list-style-type: none;
+  background: #f36a8d;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#aboutUs .container .about-left-content .icons li:hover {
+  background: #edffec;
+  color: #000;
+}
+
+/* about content right  */
+
+#aboutUs .container .about-right {
+  background: #175D69;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  #aboutUs .container {
+    margin: 0;
+    padding: 0;
+  }
+  #aboutUs .container .about-right {
+    padding: 5px;
+  }
+}
+
+#aboutUs .container .about-right .text-container {
+  margin: 10px 30px 10px 0;
+  height: 100%;
+  width: 100%;
+}
+.about-right .about-text {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  text-align: start;
+  border-left: 5px solid rgb(71, 128, 71);
+  padding: 20px 10px;
+  font-size: 1em;
+  line-height: 1.8;
+  color: #f3f3f3;
+  background: #5c8c94;
+  box-shadow: 2px 3px 0 #7e7e7e;
+}
+
+.about-info {
+  margin-top: 30px;
+  width: 100%;
+}
+.about-info .wrapper {
+  padding: 15px 5px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 899px) {
+  .about-info .wrapper {
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-info .wrapper {
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 40px;
+  }
+}
+
+.about-info .wrapper .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  margin: 0 auto;
+  background: #5c8c94;
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+
+.about-info .wrapper .item:hover {
+  background: #699198;
+  border-bottom: 5px solid rgb(71, 128, 71);
+}
+
+.about-info .wrapper .item h2 {
+  position: absolute;
+  top: -23px;
+  display: flex;
+  align-items: center;
+  color: #f3f3f3;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  background: #47b2e4;
+  outline: none;
+}
+.about-info .wrapper .item p {
+  font-size: 0.9rem;
+  color: #f3f3f3;
+} 
+
+
+@media screen and (max-width: 991px) {
+  #aboutUs .container .about-left-content {
+    width: 100%;
+    padding: 0 10px;
+  }
+  #aboutUs .container .about-right {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  #aboutUs .container .about-left-content > div{
+    width: 100%;
+    padding: 0 20px;
+  }
+  #aboutUs .container .about-right .text-container{
+    margin: 0;
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-left {
+    position: relative;
+  }
+  .about-left-content {
+    position: absolute;
+    right: -50px;
+  }
+  #aboutUs .container .about-right {
+    padding-left: 4rem;
   }
 }
