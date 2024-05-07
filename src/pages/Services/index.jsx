@@ -1,6 +1,7 @@
 import PageTitle from "../../components/PageTitle";
-import ServiveImg from "../../assets/images/bg2.jpg";
+import ServiceImg from "../../assets/images/bg2.jpg";
 import { Link } from "react-router-dom";
+import servicesItems from "./data";
 const Services = () => {
   return (
     <section className='services' id='services'>
@@ -9,78 +10,20 @@ const Services = () => {
       </div>
       <div className='container'>
         <div className='wrapper'>
-          <div className='item'>
-            <Link to='services' className='thumbnail'>
-              <img src={ServiveImg} alt='author' />
-            </Link>
-            <div className='text'>
-              <h3>10 Tips to clean your window</h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia.
-              </p>
-            </div>
-          </div>
-          <div className='item'>
-            <Link to='services' className='thumbnail'>
-              <img src={ServiveImg} alt='author' />
-            </Link>
-            <div className='text'>
-              <h3>10 Tips to clean your window</h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia.
-              </p>
-            </div>
-          </div>
-          <div className='item'>
-            <Link to='services' className='thumbnail'>
-              <img src={ServiveImg} alt='author' />
-            </Link>
-            <div className='text'>
-              <h3>10 Tips to clean your window</h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia.
-              </p>
-            </div>
-          </div>
-          <div className='item'>
-            <Link to='services' className='thumbnail'>
-              <img src={ServiveImg} alt='author' />
-            </Link>
-            <div className='text'>
-              <h3>10 Tips to clean your window</h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia.
-              </p>
-            </div>
-          </div>
-          <div className='item'>
-            <Link to='services' className='thumbnail'>
-              <img src={ServiveImg} alt='author' />
-            </Link>
-            <div className='text'>
-              <h3>10 Tips to clean your window</h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia.
-              </p>
-            </div>
-          </div>
-          <div className='item'>
-            <Link to='services' className='thumbnail'>
-              <img src={ServiveImg} alt='author' />
-            </Link>
-            <div className='text'>
-              <h3>10 Tips to clean your window</h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia.
-              </p>
-            </div>
-          </div>
+          {servicesItems.map((item) => {
+            const { id, title, description } = item;
+            return (
+              <div key={id} className='item'>
+                <Link to='services' className='thumbnail'>
+                  <img src={ServiceImg} alt='author' />
+                </Link>
+                <div className='text'>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
