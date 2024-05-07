@@ -787,68 +787,95 @@ section {
 -------------- HOME SECTION -------------------
 ************* CONTACT US ************************
 *************/
+#contact {
+  background: #666983;
+}
 
-/* contact */
-/* .container .content {
+#contact .container{
+  width: 85%;
+}
+
+#contact .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container .content .left-side {
-  width: 25%;
-  height: 100%;
+#contact .content .left-side {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 25%;
+  height: 100%;
   margin-top: 15px;
-  position: relative;
+  background: #2F4F4F;
 }
-.content .left-side::before {
+
+#contact .left-side::before {
   content: "";
   position: absolute;
-  height: 70%;
+  height: 90%;
   width: 2px;
   right: -15px;
   top: 50%;
   transform: translateY(-50%);
   background: #afafb6;
 }
-.content .left-side .details {
-  margin: 14px;
-  text-align: center;
-}
-.content .left-side .details i {
-  font-size: 30px;
-  color: #3e2093;
-  margin-bottom: 10px;
-}
-.content .left-side .details .topic {
-  font-size: 18px;
-  font-weight: 500;
-}
-.content .left-side .details .text-one,
-.content .left-side .details .text-two {
-  font-size: 14px;
-  color: #afafb6;
+
+#contact .content .left-side .details {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  gap: 20px;
 }
 
-.container .content .right-side {
-  width: 75%;
-  margin-left: 75px;
+#contact .content .left-side .details .icon {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
 }
-.content .right-side .topic-text {
-  font-size: 23px;
-  font-weight: 600;
+
+#contact .content .left-side .details svg {
+  font-size: 35px;
   color: #3e2093;
 }
-.right-side .input-box {
+
+#contact .content .left-side .info{
+display: flex;
+flex-direction: column;
+width: 70%;
+align-items: self-start;
+padding: 10px;
+color: #afafb6;
+
+} 
+#contact .content .left-side .info .topic {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f36a8d;
+  margin-bottom: 5px;
+}
+
+ #contact .right-side {
+  width: 75%;
+  margin-left: 95px;
+}
+ #contact .right-side .contact-form  .topic-text {
+  font-size: 25px;
+  font-weight: 700;
+  color: #3e2093;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+#contact .right-side .contact-form  .input-box {
   height: 55px;
   width: 100%;
   margin: 12px 0;
 }
-.right-side .input-box input,
-.right-side .input-box textarea {
+ #contact .right-side .contact-form  .input-box input,
+ #contact .right-side .contact-form  .input-box textarea {
   height: 100%;
   width: 100%;
   border: none;
@@ -859,7 +886,7 @@ section {
   padding: 0 15px;
   resize: none;
 }
-.right-side .message-box {
+ #contact .right-side .contact-form .message-box {
   min-height: 110px;
 }
 .right-side .input-box textarea {
@@ -869,7 +896,7 @@ section {
   display: inline-block;
   margin-top: 12px;
 }
-.right-side .button input[type="button"] {
+ #contact .right-side .contact-form  .button input[type="button"] {
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -880,26 +907,20 @@ section {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button input[type="button"]:hover {
+ #contact .right-side .contact-form .button input[type="button"]:hover {
   background: #5029bc;
 }
 
 @media (max-width: 950px) {
-  .container {
-    width: 90%;
-    padding: 30px 40px 40px 35px;
-  }
-  .container .content .right-side {
+ 
+  #contact .container .content .right-side {
     width: 75%;
     margin-left: 55px;
   }
 }
 @media (max-width: 820px) {
-  .container {
-    margin: 40px 0;
-    height: 100%;
-  }
-  .container .content {
+
+  #contact .container .content {
     flex-direction: column-reverse;
   }
   .container .content .left-side {
@@ -916,4 +937,4 @@ section {
     width: 100%;
     margin-left: 0;
   }
-}  */
+}   
