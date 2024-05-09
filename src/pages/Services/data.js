@@ -74,13 +74,9 @@ const servicesItems = [
     title: "After party/celebration cleaning",
     description: "We provide cleaning services after parties or celebrations to clean up the mess."
   },
+ 
   {
     id: 16,
-    title: "Individual based cleaning services",
-    description: "We offer individual-based cleaning services tailored to your specific needs."
-  },
-  {
-    id: 17,
     title: "Moving services",
     description: "Our team can help with moving services to make your move easier and stress-free."
   }

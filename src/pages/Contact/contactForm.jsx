@@ -14,7 +14,7 @@ const ContactForm = () => {
           <textarea placeholder='Enter your message'></textarea>
         </div>
         <div className='button'>
-          <input type='button' value='Send Now' />
+          <input className=' primary-btn' type='button' value='Send Now' />
         </div>
       </form>
     </div>

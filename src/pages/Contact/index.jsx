@@ -1,6 +1,7 @@
 import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
 import PageTitle from "../../components/PageTitle";
 import ContactForm from "./contactForm";
+import SocialMediaIcons from "../../components/SocialMediaIcons";
 const Contact = () => {
   return (
     <section className='contact' id='contact'>
@@ -44,6 +45,11 @@ const Contact = () => {
             <div className='right-side'>
               <ContactForm />
             </div>
+          </div>
+          {/* social media  */}
+          <div>
+            
+            <SocialMediaIcons />
           </div>
         </div>
       </div>
