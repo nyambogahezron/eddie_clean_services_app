@@ -1,8 +1,9 @@
-import { FaFacebookF, FaTwitter, FaLinkedin,  FaTiktok } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <section className='footer'>
-      <div className='container'>
+    <footer>
+      <div className='wrapper'>
         <div className='footer-row'>
           <div className='footer-col'>
             <h4>Info</h4>
@@ -40,7 +41,7 @@ const Footer = () => {
               <li>
                 <a href='#'>Our Team</a>
               </li>
-              
+
               <li>
                 <a href='#'>New And Events</a>
               </li>
@@ -65,7 +66,6 @@ const Footer = () => {
               <li>
                 <a href='#'>Testimonials</a>
               </li>
-              
             </ul>
           </div>
 
@@ -88,7 +88,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </section>
+      <hr/>
+      <div className='powered-by'>
+        <span>@copy-right 2024</span>
+        <span>
+          {" "}
+          <Link to='#'>view developer </Link>
+        </span>
+      </div>
+    </footer>
   );
 };
 

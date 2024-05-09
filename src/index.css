@@ -296,7 +296,7 @@ section {
     font-size: 1.5rem;
   }
 
-  .links {
+  .navbar .links {
     position: fixed;
     left: -100%;
     top: 75px;
@@ -1073,13 +1073,13 @@ display: block;
 -------------- FOOTER SECTION -------------------
 *************/
 
-.footer {
+footer {
   position: relative;
   width: 100%;
   background: #10182f;
 }
 
-.footer .footer-row {
+footer .footer-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1168,8 +1168,24 @@ display: block;
   color: #fff;
 }
 
+.powered-by{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.powered-by span:nth-child(1){
+  color: #f3f3f3;
+}
+
+.powered-by span:nth-child(2){
+  text-transform: capitalize;
+}
+
+
 @media (max-width: 768px) {
-  .footer {
+  footer {
     position: relative;
     bottom: 0;
     left: 0;
@@ -1178,7 +1194,7 @@ display: block;
     border-radius: 0;
   }
 
-  .footer .footer-row {
+  footer .footer-row {
     padding: 20px;
     gap: 1rem;
   }
