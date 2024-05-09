@@ -1269,13 +1269,15 @@ section {
 *************/
 
 .pricing .wrapper {
-  max-width: 1090px;
+  max-width: 1200px;
   width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
+
 .pricing .wrapper .table {
   background: #fff;
   width: calc(33% - 20px);
@@ -1432,13 +1434,13 @@ section {
   font-size: 24px;
 }
 @media (max-width: 1020px) {
-  .wrapper .table {
+  .pricing .wrapper .table {
     width: calc(50% - 20px);
     margin-bottom: 40px;
   }
 }
 @media (max-width: 698px) {
-  .wrapper .table {
+  .pricing .wrapper .table {
     width: 100%;
   }
 }
