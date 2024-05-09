@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import Links from "./data";
+import { PrimaryLinks } from "./data";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   return (
@@ -23,7 +24,7 @@ const Navbar = () => {
       </label>
 
       <ul className='links'>
-        {Links.map((link, index) => (
+        {PrimaryLinks.map((link, index) => (
           <li key={index}>
             <Link to={link.path}>{link.name}</Link>
           </li>

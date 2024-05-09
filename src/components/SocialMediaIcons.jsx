@@ -6,41 +6,51 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
+const socialMediaLinks = [
+  {
+    id: 1,
+    name: "Facebook",
+    icon: <FaFacebook />,
+    link: "https://www.facebook.com",
+  },
+  {
+    id: 2,
+    name: "Twitter",
+    icon: <FaTwitter />,
+    link: "https://www.twitter.com",
+  },
+  {
+    id: 3,
+    name: "Instagram",
+    icon: <FaInstagram />,
+    link: "https://www.instagram.com",
+  },
+  {
+    id: 4,
+    name: "TikTok",
+    icon: <FaTiktok />,
+    link: "https://www.tiktok.com",
+  },
+  {
+    id: 5,
+    name: "YouTube",
+    icon: <FaYoutube />,
+    link: "https://www.youtube.com",
+  },
+];
 const SocialMediaIcons = () => {
   return (
     <div className='social-media-icons'>
       <h1>follow us on social media</h1>
       <div className='wrapper'>
-        <div className='button'>
-          <div className='icon'>
-            <FaFacebook />
+        {socialMediaLinks.map((platform) => (
+          <div className='button' key={platform.id}>
+            <div className='icon'>{platform.icon}</div>
+            <span>
+              <a href={platform.link} target="_blank" rel="noopener noreferrer">{platform.name}</a>
+             </span>
           </div>
-          <span>Facebook</span>
-        </div>
-        <div className='button'>
-          <div className='icon'>
-            <FaTwitter />
-          </div>
-          <span>Twitter</span>
-        </div>
-        <div className='button'>
-          <div className='icon'>
-            <FaInstagram />
-          </div>
-          <span>Instagram</span>
-        </div>
-        <div className='button'>
-          <div className='icon'>
-            <FaTiktok />
-          </div>
-          <span>TikTok</span>
-        </div>
-        <div className='button'>
-          <div className='icon'>
-            <FaYoutube />
-          </div>
-          <span>YouTube</span>
-        </div>
+        ))}
       </div>
     </div>
   );
