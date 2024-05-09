@@ -63,13 +63,14 @@ const Services = () => {
             <p className='no-service'>No services match your search.</p>
           )}
         </div>
+        {/* pagination  */}
         <div className='pagination'>
           <button
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
             className={`prev ${currentPage === 1 ? "disabled" : ""}`}
           >
-            Prev{" "}
+          
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
@@ -82,7 +83,7 @@ const Services = () => {
             <button
               key={index + 1}
               onClick={() => paginate(index + 1)}
-              className={currentPage === index + 1 ? "active" : ""}
+              className={`page-no ${currentPage === index + 1 ? "active" : ""}`}
             >
               {index + 1}
             </button>
@@ -92,7 +93,7 @@ const Services = () => {
             disabled={currentPage === totalPages}
             className={`next ${currentPage === totalPages ? "disabled" : ""}`}
           >
-            Next
+            
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
@@ -101,10 +102,11 @@ const Services = () => {
               <path d='M19.1642 12L12.9571 5.79291L11.5429 7.20712L16.3358 12L11.5429 16.7929L12.9571 18.2071L19.1642 12ZM13.5143 12L7.30722 5.79291L5.89301 7.20712L10.6859 12L5.89301 16.7929L7.30722 18.2071L13.5143 12Z'></path>
             </svg>
           </button>
-        </div>
+
         <p>
           Page {currentPage}/{totalPages}
         </p>
+        </div>
       </div>
     </section>
   );
