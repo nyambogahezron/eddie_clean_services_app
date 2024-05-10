@@ -678,7 +678,7 @@ section {
 #aboutUs .container .about-left-content > div {
   height: 600px;
   width: 500px;
-  background-image: url("../src/assets/images/bg2.jpg");
+  background-image: url("../src/assets/images/img-1.jpg");
   background-position: center;
   background-size: cover;
 }

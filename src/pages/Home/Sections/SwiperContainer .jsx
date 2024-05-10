@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import HeroImg3 from "../../../assets/images/bg3.jpg";
-import HeroImg2 from "../../../assets/images/bg2.jpg";
-import HeroImg1 from "../../../assets/images/bg1.jpg";
+import HeroImg3 from "../../../assets/images/img-1.jpg";
+import HeroImg2 from "../../../assets/images/img-2.jpg";
+import HeroImg1 from "../../../assets/images/img-3.jpg";
 
 const SwiperContainer = () => {
   const swiperStyle = {

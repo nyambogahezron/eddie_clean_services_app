@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PageTitle from "../../components/PageTitle";
-import ServiceImg from "../../assets/images/bg2.jpg";
 import { Link } from "react-router-dom";
 import servicesItems from "./data";
 
@@ -46,11 +45,11 @@ const Services = () => {
         <div className='wrapper'>
           {currentServices.length > 0 ? (
             currentServices.map((item) => {
-              const { id, title, description } = item;
+              const { id, title, description, img } = item;
               return (
                 <div key={id} className='item'>
                   <Link to='services' className='thumbnail'>
-                    <img src={ServiceImg} alt='author' />
+                    <img src={img} alt={title} />
                   </Link>
                   <div className='text'>
                     <h3>{title}</h3>

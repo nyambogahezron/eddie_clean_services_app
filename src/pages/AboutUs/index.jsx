@@ -1,6 +1,5 @@
 import CompanyValues from "../../components/AboutUsValues";
 import PageTitle from "../../components/PageTitle";
-// import AboutUsImg from "../../assets/images/bg1.jpg";
 import {
   FaFacebook,
   FaTwitter,
