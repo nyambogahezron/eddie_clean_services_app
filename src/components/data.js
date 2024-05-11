@@ -12,7 +12,7 @@ const exploreLinks = [
   { id: 2, path: "/activities", name: "Latest Activities" },
   { id: 3, path: "#galley", name: "Galley" },
   { id: 4, path: "#team", name: "Our Team" },
-  { id: 4, path: "#news", name: "News And Events" },
+  { id: 5, path: "#news", name: "News And Events" },
 ];
 
 const legalLinks = [
