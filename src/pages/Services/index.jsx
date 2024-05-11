@@ -1,12 +1,10 @@
-import PageTitle from "../../components/PageTitle";
 import ServicesInfo from "../../components/ServicesInfo";
+import SinglePageNav from "../../components/singlePageNav";
 
 const Services = () => {
   return (
     <section className='services' id='services'>
-      <div className='section-title'>
-        <PageTitle text='Our Services' />
-      </div>
+     <SinglePageNav title='Our Services' />
       <ServicesInfo />
     </section>
   );

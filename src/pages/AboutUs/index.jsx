@@ -1,10 +1,10 @@
 import AboutUsInfo from "../../components/AboutUsInfo";
-import PageTitle from "../../components/PageTitle";
+import SinglePageNav from "../../components/singlePageNav";
 
 const AboutUs = () => {
   return (
     <section id='aboutUs'>
-      <PageTitle text='About Us' />
+      <SinglePageNav title='about Us' />
       <AboutUsInfo />
     </section>
   );
