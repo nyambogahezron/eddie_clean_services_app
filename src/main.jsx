@@ -22,9 +22,9 @@ const router = createBrowserRouter(
       <Route path='/' element={<App />} >
       <Route path='/' element={<Home />} />
       <Route path='/aboutUs' element={<AboutUs />} />
-      <Route path='/contactUs' element={<ContactUs />} />
       <Route path='/services' element={<Services />} />
       <Route path='/pricing' element={<Pricing />} />
+      <Route path='/contactUs' element={<ContactUs />} />
       </Route>
       <Route path='*' element={<NotFound />} />
     </Route>

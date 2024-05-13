@@ -4,7 +4,7 @@ import SinglePageNav from "../../components/singlePageNav";
 const Services = () => {
   return (
     <section className='services' id='services'>
-     <SinglePageNav title='Our Services' />
+      <SinglePageNav title='Our Services' />
       <ServicesInfo />
     </section>
   );

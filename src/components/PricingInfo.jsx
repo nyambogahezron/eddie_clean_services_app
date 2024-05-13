@@ -7,6 +7,7 @@ const PricingInfo = () => {
     <div className='container'>
       <div className='pricing'>
         <div className='wrapper'>
+          
           {pricingTables.map((table) => (
             <div className={`table ${table.type}`} key={table.id}>
               <div className='price-section'>

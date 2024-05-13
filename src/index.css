@@ -25,6 +25,11 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: rgba(23, 162, 184, 0.3);
+  color: #333;
+}
+
 a {
   text-decoration: none;
 }
@@ -62,6 +67,28 @@ section {
   width: 100vw;
   margin-bottom: 40px;
   overflow-x: hidden;
+}
+
+.title h1 {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 25px;
+  margin-bottom: 60px;
+  color: #f3f3f3;
+  text-transform: capitalize;
+}
+
+.title h1::before {
+  position: absolute;
+  content: "";
+  background: #f36a8d;
+  width: 20%;
+  height: 4px;
+  bottom: -20px;
 }
 
 /* Home section  page title */
@@ -196,11 +223,6 @@ section {
   margin: 20px 0;
 }
 
-.pagination p {
-  position: absolute;
-  color: #f0f1f8;
-  right: 0;
-}
 .pagination button {
   margin: 0 5px;
   padding: 5px 10px;
@@ -1051,6 +1073,95 @@ button {
   margin: 40px auto auto;
 }
 
+/*************** Testimonial section *******************/
+
+.testimonial {
+  margin-top: 60px;
+}
+
+
+
+.testimonial .wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonial .wrapper .box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 3px;
+}
+.testimonial .wrapper .box svg.quote {
+  font-size: 20px;
+  color: #17a2b8;
+}
+
+.testimonial .wrapper .box p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.testimonial .wrapper .box .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.testimonial .box .info{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.testimonial .box .info .name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #17a2b8;
+  margin-bottom: 10px;
+}
+
+
+.testimonial .box .info .stars svg {
+  color: #17a2b8;
+}
+.testimonial .box .content .image {
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #17a2b8;
+  border-radius: 50%;
+}
+.testimonial .content .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.testimonial .box:hover .content .image img {
+  border-color: #fff;
+}
+
+@media (max-width: 1045px) {
+  .testimonial .wrapper .box {
+    /* width: calc(50% - 10px); */
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .testimonial .wrapper .box {
+    width: 100%;
+  }
+}
+
 /* ***********
 -------------- HOME SECTION -------------------
 ************* CONTACT US ************************
@@ -1158,8 +1269,6 @@ button {
   color: #f3f3f3;
 }
 
-
-
 #contact .right-side {
   width: 75%;
   margin-left: 55px;
@@ -1205,8 +1314,7 @@ button {
 .social-media-icons h1 {
   position: relative;
   color: #f0f1f8;
-  font-size: 20px;
-  font-family: cursive;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -1218,8 +1326,8 @@ button {
 .social-media-icons .wrapper .button {
   display: flex;
   align-items: center;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   float: left;
   margin: 0 5px;
   overflow: hidden;
@@ -1236,8 +1344,8 @@ button {
 
 .social-media-icons .wrapper .button .icon {
   display: flex;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   text-align: center;
   border-radius: 50px;
   box-sizing: border-box;
@@ -1312,12 +1420,13 @@ button {
     margin-bottom: 35px;
   }
   #contact .container .content {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .container .content .left-side {
     width: 100%;
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 10px;
+    margin-bottom: 40px;
     justify-content: center;
     flex-wrap: wrap;
   }

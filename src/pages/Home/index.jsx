@@ -27,12 +27,6 @@ const Home = () => {
           <PageTitle text='About Us' />
           <AboutUsInfo />
         </section>
-        <section className='contact' id='contact'>
-          <div>
-            <PageTitle text='Contact Us' />
-            <ContactUsInfo />
-          </div>
-        </section>
         <section className='services' id='services'>
           <div className='section-title'>
             <PageTitle text='Our Services' />
@@ -45,8 +39,13 @@ const Home = () => {
           </div>
           <PricingInfo />
         </section>
+        <section className='contact' id='contact'>
+          <div>
+            <PageTitle text='Contact Us' />
+            <ContactUsInfo />
+          </div>
+        </section>
       </main>
-      
     </div>
   );
 };

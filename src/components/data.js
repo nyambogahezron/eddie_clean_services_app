@@ -173,4 +173,59 @@ const servicesItems = [
     },
   };
 
-export {PrimaryLinks, exploreLinks, legalLinks, socialMediaLinks, servicesItems, countryDetails} 
+
+const testimonials = [
+  {
+    id: 1,
+    text: "Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.",
+    name: "Alex Smith",
+    stars: 5,
+    image: "images/profile-1.jpeg",
+  },
+  {
+    id: 2,
+    text: "Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.",
+    name: "Steven Chris",
+    stars: 5,
+    image: "images/profile-2.jpeg",
+  },
+  {
+    id: 3,
+    text: "Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.",
+    name: "Kristina Bellis",
+    stars: 5,
+    image: "images/profile-3.jpeg",
+  },
+  {
+    id: 4,
+    text: "Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.",
+    name: "John Doe",
+    stars: 5,
+    image: "images/profile-4.jpeg",
+  },
+  {
+    id: 5,
+    text: "Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.",
+    name: "Jane Doe",
+    stars: 5,
+    image: "images/profile-5.jpeg",
+  },
+  {
+    id: 6,
+    text: "Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.",
+    name: "Richard Roe",
+    stars: 5,
+    image: "images/profile-6.jpeg",
+  },
+];
+
+
+export {
+  PrimaryLinks,
+  exploreLinks,
+  legalLinks,
+  socialMediaLinks,
+  servicesItems,
+  countryDetails,
+  testimonials
+    } 
