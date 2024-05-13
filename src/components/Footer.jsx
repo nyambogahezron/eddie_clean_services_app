@@ -1,9 +1,31 @@
-import { FaFacebookF, FaTwitter, FaLinkedin, FaTiktok } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedin,
+  FaTiktok,
+  FaArrowUp,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import { useState, useEffect } from "react";
 import { PrimaryLinks, exploreLinks, legalLinks } from "./data";
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 1200) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
   return (
     <footer>
       <div className='wrapper'>
@@ -68,6 +90,12 @@ const Footer = () => {
           <Link to='#'>view developer </Link>
         </span>
       </div>
+      <button title="Go to top"
+        className={`scrollToTop ${isVisible ? "show" : ""}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <FaArrowUp />
+      </button>
     </footer>
   );
 };

@@ -1844,6 +1844,39 @@ footer .footer-row {
   }
 }
 
+.scrollToTop {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+  bottom: 40px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(80px);
+  transition: all 0.3s ease;
+}
+
+.scrollToTop.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scrollToTop:hover{
+  background: #333;
+}
+
 /* ***********
 -------------- SINGLE PAGE SECTION -------------------
 *************/
