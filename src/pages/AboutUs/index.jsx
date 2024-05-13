@@ -7,7 +7,7 @@ const AboutUs = () => {
       <SinglePageNav title='about Us' />
       <AboutUsInfo />
     </section>
-  );
+      );
 };
 
 export default AboutUs;

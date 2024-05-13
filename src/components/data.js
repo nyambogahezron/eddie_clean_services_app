@@ -1,5 +1,4 @@
 
-
 const PrimaryLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/aboutUs' },
@@ -156,5 +155,22 @@ const servicesItems = [
   }
 ];
 
+  const countryDetails = {
+    kenya: {
+      address: "Birendranagar 06, Kenya",
+      phone: ["+0098 9893 5647", "+0096 3434 5678"],
+      email: ["codinglab@gmail.com", "info.codinglab@gmail.com"],
+    },
+    uganda: {
+      address: "Birendranagar 06, Uganda",
+      phone: ["+0098 9893 5647", "+0096 3434 5678"],
+      email: ["codinglab@gmail.com", "info.codinglab@gmail.com"],
+    },
+    tanzania: {
+      address: "Birendranagar 06, Tanzania",
+      phone: ["+0098 9893 5647", "+0096 3434 5678"],
+      email: ["codinglab@gmail.com", "info.codinglab@gmail.com"],
+    },
+  };
 
-export {PrimaryLinks, exploreLinks, legalLinks, socialMediaLinks, servicesItems} 
+export {PrimaryLinks, exploreLinks, legalLinks, socialMediaLinks, servicesItems, countryDetails} 

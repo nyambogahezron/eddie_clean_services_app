@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* ***********
 -------------- GLOBAL CSS -------------------
@@ -10,12 +8,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
   position: relative;
   height: 100vh;
+  font-family: "Poppins", sans-serif;
   width: 100vw;
   max-width: 100%;
   min-width: 100%;
@@ -557,7 +555,7 @@ button {
     text-align: center;
   }
 
-  .swipperContainer {
+  .hero-section .img {
     display: none;
   }
 }
@@ -758,7 +756,7 @@ button {
   border-left: 5px solid rgb(71, 128, 71);
   padding: 20px 10px;
   font-size: 1em;
-  line-height: 2.6;
+  line-height: 27px;
   color: #f3f3f3;
   background: #2f4f4f;
   box-shadow: 2px 3px 0 #7e7e7e;
@@ -848,6 +846,9 @@ button {
   #aboutUs .container .about-text {
     margin-left: 0;
     border: none;
+  }
+  .about-info .wrapper .item {
+    width: 100%;
   }
 }
 
@@ -1123,6 +1124,42 @@ button {
   margin-bottom: 5px;
 }
 
+/* lef side address tabs  */
+
+.tabs {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  justify-content: center;
+}
+
+.tabs div {
+  position: relative;
+  display: flex;
+  flex-basis: 30.33%;
+  padding: 10px;
+  cursor: pointer;
+  background: #2f4f4f;
+  color: #f3f3f3;
+  margin-top: 8px;
+  background: #007bff;
+  transition: all 0.3s ease;
+}
+
+.tabs div:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.tabs div.active {
+  background: #f36a8d;
+  color: #f3f3f3;
+}
+
+
+
 #contact .right-side {
   width: 75%;
   margin-left: 55px;
@@ -1266,6 +1303,7 @@ button {
 @media (max-width: 820px) {
   #contact .container {
     width: 100%;
+    padding: 5px;
   }
 
   #contact .right-side {
@@ -1289,6 +1327,10 @@ button {
   .container .content .right-side {
     width: 100%;
     margin-left: 0;
+  }
+
+  .tabs {
+    justify-content: start;
   }
 }
 
@@ -1772,17 +1814,17 @@ footer .footer-row {
 }
 
 .single-page-nav.fixed {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    align-items: baseline;
-    left: 0;
-    padding: 20px 30px;
-    margin: 0 auto;
-    background: #f0f0f0;
-    top: 0;
-    height: 70px;
-    z-index: 9999;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  left: 0;
+  padding: 20px 30px;
+  margin: 0 auto;
+  background: #f0f0f0;
+  top: 0;
+  height: 70px;
+  z-index: 9999;
 }
 
 .single-page-nav .home-link {
