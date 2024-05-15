@@ -31,13 +31,10 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className='buttons'>
-        <Link to='#' className='signin'>
-          Sign In
-        </Link>
-        <Link to='#' className='signup'>
+      <div className='buttons btn btn-secondary'>
+        <a href='#contact'>
           Sign Up
-        </Link>
+        </a>
       </div>
     </nav>
   );

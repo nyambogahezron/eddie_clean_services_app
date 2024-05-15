@@ -4,19 +4,23 @@ const HeroSection = () => {
   return (
     <div className='hero-section'>
       <div className='hero'>
-        <h2>Eddie Clean Services</h2>
-        <p>
-          Welcome to Eddie Cleaners, where we transform your space into a
+        <h2>
+          <span>Eddie</span>
+          <span>&nbsp; clean</span>
+          <span>&nbsp; services</span>
+        </h2>
+        <p className="fade-up">
+          Welcome to Eddie Clean Services, where we transform your space into a
           pristine sanctuary. Our professional team specializes in meticulous
           cleaning services tailored to your needs. With eco-friendly practices
           and unparalleled attention to detail, we promise a sparkling,
           refreshed environment every time.
         </p>
-        <div className='buttons'>
-          <Link to='#services' className='join'>
-            Services
+        <div className='buttons fade-up'>
+          <Link to='#services' className=' btn btn-primary'>
+            Our Services
           </Link>
-          <Link to='#contactUs' className='learn'>
+          <Link to='#contactUs' className='btn btn-secondary'>
             Contact Us
           </Link>
         </div>
