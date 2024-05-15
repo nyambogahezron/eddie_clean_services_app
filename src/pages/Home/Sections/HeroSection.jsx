@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import SwiperContainer from "./SwiperContainer ";
 const HeroSection = () => {
   return (
@@ -17,12 +16,12 @@ const HeroSection = () => {
           refreshed environment every time.
         </p>
         <div className='buttons fade-up'>
-          <Link to='#services' className=' btn btn-primary'>
+          <a href='#services' className=' btn btn-primary'>
             Our Services
-          </Link>
-          <Link to='#contactUs' className='btn btn-secondary'>
+          </a>
+          <a href='#contact' className='btn btn-secondary'>
             Contact Us
-          </Link>
+          </a>
         </div>
       </div>
       <div className='img'>

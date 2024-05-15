@@ -9,7 +9,7 @@ import HeroImg1 from "../../../assets/images/img-3.jpg";
 
 const SwiperContainer = () => {
   const swiperStyle = {
-    width: "550px",
+    width: "600px",
     height: "500px",
   };
 
@@ -19,7 +19,6 @@ const SwiperContainer = () => {
     alignItems: "center",
     fontSize: "20px",
     color: "white",
-    backgroundColor: "#007BFF",
     width: "100%",
     height: "100%",
   };

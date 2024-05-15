@@ -33,7 +33,7 @@ const Navbar = () => {
 
       <div className='buttons btn btn-secondary'>
         <a href='#contact'>
-          Sign Up
+          Get Started
         </a>
       </div>
     </nav>
