@@ -22,10 +22,10 @@ const TestimonialSection = () => {
                 0: {
                 slidesPerView: 1,
                 },
-                640: {
+                899: {
                 slidesPerView: 2,
                 },
-                768: {
+                955: {
                 slidesPerView: 3,
                 },
             }}

@@ -1190,36 +1190,78 @@ button {
 *************/
 
 #services {
-  margin-top: 35px;
+  position: relative;
+  margin-top: -30px;
+  background-color: var(--dark-color);
+}
+
+.custom-shape-divider-top-1715812006 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1715812006 svg {
+  position: relative;
+  display: block;
+  width: calc(111% + 1.3px);
+  height: 100px;
+}
+
+.custom-shape-divider-top-1715812006 .shape-fill {
+  fill: #233857;
 }
 
 #services .container {
   width: 95%;
 }
 
-#services .container .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 20px;
+#services .title-container {
+  align-items: center;
+}
+
+#services .title-container h1 {
+  color: var(--red-light-clr);
+  align-items: center;
+}
+
+#services .container .services-item .wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  min-height: 100%;
+  gap: 20px;
+  scroll-behavior: smooth;
+  transition: var(--transition-1);
 }
 
 #services .container .item {
   background: #edffec;
-  width: calc(33.33% - 10px);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 8px;
   outline: none;
   padding: 2px;
+  transition: 0.3s all ease;
+  box-shadow: 0px 0px 5px rgb(237, 235, 235);}
+
+@media screen and (max-width: 999px) {
+  #services .container .services-item .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media screen and (max-width: 899px) {
-  #services .container .item {
-    width: calc(50% - 10px);
+@media screen and (max-width: 799px) {
+  #services .container .services-item .wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 600px) {
+  #services .container .services-item .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
   #services .container .item,
   #services .container {
     width: 100%;
@@ -1228,12 +1270,16 @@ button {
 }
 
 #services .container .item .thumbnail img {
+  position: relative;
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  height: auto;
+  height: 200px;
   transition: 0.3s all ease;
+  object-fit: cover;
 }
+
+
 #services .container .item .thumbnail img:hover {
   opacity: 0.8;
 }
@@ -1252,6 +1298,7 @@ button {
 #services .container .item .text p {
   font-size: 0.855rem;
   line-height: 1.6;
+  font-family: Poppins;
 }
 
 #services .search input {
@@ -1260,11 +1307,10 @@ button {
   align-items: center;
   margin-bottom: 20px;
   width: 100%;
-  padding: 10px;
+  padding: 13px;
   font-size: 18px;
   border-radius: 5px;
   border: none;
-  box-shadow: "0px 0px 15px rgba(0, 0, 0, 0.1)";
 }
 
 #services .container .no-service {
@@ -1273,12 +1319,12 @@ button {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-  width: 70%;
+  width: 100%;
   background: var(--light-color-1);
   font-weight: bold;
   text-transform: capitalize;
   font-size: 1.5rem;
-  margin: 40px auto auto;
+  margin: 0 auto;
 }
 
 /*************** Testimonial section *******************/
@@ -1288,9 +1334,9 @@ button {
 }
 
 .testimonial .wrapper {
+  position: relative;
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1301,6 +1347,8 @@ button {
   background: var(--white);
   padding: 25px;
   border-radius: 3px;
+  height: 300px;
+  z-index: 99;
 }
 .testimonial .wrapper .box svg.quote {
   font-size: 20px;

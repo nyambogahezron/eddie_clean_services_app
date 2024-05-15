@@ -6,7 +6,7 @@ import TestimonialSection from "./TestimonialSection";
 const ServicesInfo = () => {
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [servicesPerPage] = useState(6);
+  const [servicesPerPage] = useState(8);
 
   const filteredServices = servicesItems.filter(
     (service) =>
@@ -37,25 +37,27 @@ const ServicesInfo = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className='wrapper'>
-        {currentServices.length > 0 ? (
-          currentServices.map((item) => {
-            const { id, title, description, img } = item;
-            return (
-              <div key={id} className='item'>
-                <Link to='services' className='thumbnail'>
-                  <img src={img} alt={title} />
-                </Link>
-                <div className='text'>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
+      <div className='services-item'>
+        <div className='wrapper'>
+          {currentServices.length > 0 ? (
+            currentServices.map((item) => {
+              const { id, title, description, img } = item;
+              return (
+                <div key={id} className='item'>
+                  <Link to='services' className='thumbnail'>
+                    <img src={img} alt={title} />
+                  </Link>
+                  <div className='text'>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })
-        ) : (
-          <p className='no-service'>No services match your search.</p>
-        )}
+              );
+            })
+          ) : (
+            <p className='no-service'>No services match your search.</p>
+          )}
+        </div>
       </div>
       {/* pagination  */}
       <div className='pagination'>
