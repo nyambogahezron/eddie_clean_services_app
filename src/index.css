@@ -13,6 +13,7 @@
   /* colors  */
 
   --bg-primary-clr: #175d69;
+  --bg-secondary-clr: #233857;
   --purple-clr: #3e2093;
   --red-light-clr: #f36a8d;
   --tertiary-clr: #47b2e4;
@@ -29,7 +30,7 @@
   --font-800: 800;
 
   /* animations and transitions  */
-
+  --transition-1: all 0.3s ease;
   --delay-500: 500ms;
   ---delay-600: 600ms;
 }
@@ -89,7 +90,7 @@ section {
   min-height: 100vh;
   height: 100%;
   width: 100vw;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   overflow-x: hidden;
 }
 
@@ -211,7 +212,7 @@ section {
   border-radius: 4px;
   background: var(--purple-clr);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
 }
 
 .primary-btn:hover {
@@ -687,13 +688,29 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
+  max-width: 1600px;
   width: 100vw;
   margin: -30px auto 30px auto;
   padding: 10px 5px;
   align-items: center;
   background: url("./assets/images/bg2.jpg");
   background-position: center;
+  isolation: isolate;
 }
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary-clr);
+  opacity: 0.7;
+  filter: brightness(70%) blur(20px) saturate(120%) contrast(120%)
+    hue-rotate(45deg);
+  z-index: -1;
+}
+
 .hero-panel .wrapper {
   display: grid;
   margin: 0 150px auto;
@@ -729,14 +746,19 @@ button {
 }
 .hero-panel .wrapper .box:hover {
   box-shadow: none;
-  background: #dfd5d5;
+  background: var(--bg-primary-clr);
+  opacity: 0.7;
   border: 2px solid rgb(116, 116, 199);
+}
+.hero-panel .wrapper .box:hover span {
+  color: var(--white);
 }
 
 .hero-panel .box .icon {
   height: 80px;
 }
 .hero-panel .box .icon svg {
+  transition: var(--transition-1);
   font-size: 65px;
   color: var(--tertiary-clr);
 }
@@ -784,16 +806,37 @@ button {
 *************/
 
 #aboutUs {
+  position: relative;
   margin-bottom: 30px;
-  background: linear-gradient(
-    to top,
-    rgba(46, 49, 65, 0.8),
-    rgba(31, 31, 35, 0.8)
-  );
+  background: var(--bg-secondary-clr);
+  border: 1px solid red;
 }
 
+.custom-shape-divider-top-1715737662 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(360deg);
+}
+
+
+/* curve */
+
+.custom-shape-divider-top-1715737662 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 104px;
+}
+
+.custom-shape-divider-top-1715737662 .shape-fill {
+  fill: var(--bg-primary-clr);
+}
 #aboutUs .container .about-left {
-  background: #233857;
+  background: var(--bg-secondary-clr);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -814,7 +857,7 @@ button {
 }
 
 #aboutUs .container .about-left-content .icons {
-  background: #233857;
+  background: var(--bg-secondary-clr);
   display: flex;
   justify-content: center;
   padding: 0.8rem 0;
@@ -1067,7 +1110,7 @@ button {
   flex: 0 0 48%;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
 }
 
 .list-item:hover {
@@ -1338,7 +1381,7 @@ button {
   width: 100%;
   align-items: center;
   margin: 0 auto;
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
   justify-content: center;
 }
 
@@ -1352,7 +1395,7 @@ button {
   color: var(--light-color-1);
   margin-top: 8px;
   background: #007bff;
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
 }
 
 .tabs div:hover {
@@ -1431,7 +1474,7 @@ button {
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-out;
+  transition: var(--transition-1);
 }
 
 .social-media-icons .wrapper .button:hover {
@@ -1446,7 +1489,7 @@ button {
   border-radius: 50px;
   box-sizing: border-box;
   line-height: 60px;
-  transition: all 0.3s ease-out;
+  transition: var(--transition-1);
 }
 .social-media-icons .wrapper .button:nth-child(1):hover .icon {
   background: #4267b2;
@@ -1466,7 +1509,7 @@ button {
 .social-media-icons .wrapper .button .icon svg {
   font-size: 25px;
   line-height: 60px;
-  transition: all 0.3s ease-out;
+  transition: var(--transition-1);
   margin: auto;
 }
 .social-media-icons .wrapper .button:hover .icon svg {
@@ -1483,7 +1526,7 @@ button {
   font-weight: 500;
   line-height: 60px;
   margin-left: 10px;
-  transition: all 0.3s ease-out;
+  transition: var(--transition-1);
 }
 .social-media-icons .wrapper .button:hover span {
   display: block;
@@ -1649,7 +1692,7 @@ button {
   outline: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
 }
 .table .btn button:hover {
   border-radius: 5px;
@@ -1980,7 +2023,7 @@ footer .footer-row {
   opacity: 0;
   visibility: hidden;
   transform: translateY(80px);
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
 }
 
 .scrollToTop.show {
@@ -2005,10 +2048,10 @@ footer .footer-row {
   display: flex;
   margin-bottom: 30px;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
   background: url("/img-1.jpg");
   background-position: center;
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
   opacity: 0.9;
 }
 .single-page-header::after {
@@ -2068,7 +2111,7 @@ footer .footer-row {
   bottom: 10px;
   margin: 0 auto;
   background: #f0f0f0;
-  transition: all 0.3s ease;
+  transition: var(--transition-1);
 }
 
 .single-page-nav.fixed {
