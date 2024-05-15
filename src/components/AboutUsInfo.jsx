@@ -13,7 +13,7 @@ const AboutUsInfo = () => {
         {/* left  */}
         <div className='about-left'>
           <div className='about-left-content'>
-            <div className='left-img'>
+            <div className='img'>
               <img src={AboutImg} alt='about image' />
               <ul className='icons'>
                 <li>
@@ -68,16 +68,17 @@ const AboutUsInfo = () => {
               </div>
               <div className='about-text'>
                 <p>
-                  {`                   
-At Eddie Clean Services, our approach integrates humility,
-growth, and responsibility into every service we provide.
- We excel at efficiently tackling cleaning challenges, 
- ensuring maximum value and trust for our clients. Our team's 
- well-being drives stability and development, 
- guaranteeing top-notch results. We prioritize integrity in 
- all our actions and embrace innovation to stay ahead. Community 
- engagement enhances our local impact, while safety and security 
- remain paramount for peace of mind in every clean.`}
+                  {`
+                  At Eddie Clean Services, our approach integrates humility,
+                  growth, and responsibility into every service we provide. We
+                  excel at efficiently tackling cleaning challenges, ensuring
+                  maximum value and trust for our clients. Our team's well-being
+                  drives stability and development, guaranteeing top-notch
+                  results. We prioritize integrity in all our actions and
+                  embrace innovation to stay ahead. Community engagement
+                  enhances our local impact, while safety and security remain
+                  paramount for peace of mind in every clean.
+                `}
                 </p>
               </div>
             </div>
@@ -85,7 +86,7 @@ growth, and responsibility into every service we provide.
         </div>
         <div className='about-right'>
           <div className='about-left-content'>
-            <div className='left-img'>
+            <div className='img'>
               <img src='/img-4.jpg' alt='about image' />
             </div>
           </div>

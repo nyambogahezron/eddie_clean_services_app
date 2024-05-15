@@ -826,14 +826,14 @@ button {
   overflow: hidden;
   line-height: 0;
   transform: rotate(360deg);
- }
+}
 
 .custom-shape-divider-top-1715737662 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 104px;
-   outline: none;
+  outline: none;
   border: none;
 }
 
@@ -855,8 +855,7 @@ button {
   overflow: hidden;
 }
 
-#aboutUs .container .about-left-content img,
-#aboutUs .container .about-col-2 img {
+#aboutUs .container :where(.about-left-content, .about-col-2) img {
   position: relative;
   height: 480px;
   width: 100%;
@@ -865,7 +864,27 @@ button {
   object-fit: cover;
   overflow: hidden;
 }
+#aboutUs .about-col-2 .img {
+  position: relative;
+}
+#aboutUs .about-col-2 .img img {
+  opacity: 1;
+}
 
+#aboutUs .about-col-2 .img::before,
+#aboutUs .about-left .img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #007bff;
+  opacity: 0.3;
+  filter: contrast(0.5) brightness(70%);
+  z-index: 1;
+}
+#aboutUs .about-col-2 .img::before {
+  bottom: 10px;
+}
 #aboutUs .container .about-left-content .icons {
   position: absolute;
   display: flex;
@@ -927,7 +946,7 @@ button {
   width: 100%;
   display: flex;
   padding: 20px 10px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: Poppins;
   font-weight: var(--font-500);
   line-height: 28px;
@@ -964,7 +983,7 @@ button {
 
   #aboutUs .container {
     margin: 0;
-    padding: 5px;
+    padding: 0 10px;
   }
 
   #aboutUs .container .about-col-2 {
@@ -975,7 +994,7 @@ button {
     height: 100%;
   }
 
-    #aboutUs .container .about-col-2 :where(.about-left, .about-right) {
+  #aboutUs .container .about-col-2 :where(.about-left, .about-right) {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
@@ -985,10 +1004,24 @@ button {
 /* motto, vision, mission, code of practice */
 
 .about-info {
-  margin-top: 30px;
-  background: linear-gradient(to left, var(--bg-primary-clr) 40%, #317a87 75%);
+  position: relative;
+  margin: 30px 0;
   padding: 20px 0;
 }
+
+.about-info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #007bff;
+  opacity: 0.3;
+  filter: blur(30px);
+}
+
 .about-info .wrapper {
   width: 80%;
   margin: 0 auto;
@@ -1019,14 +1052,27 @@ button {
   width: 250px;
   height: 200px;
   margin: 0 auto;
-  background: #2f4f4f;
-  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  background: var(--dark-color);
+  box-shadow: 0px 2px 2px 0px #fff;
   transition: all 0.5s ease;
 }
+.about-info .wrapper .item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  width: 100%;
+  background: #007bff;
+  opacity: 0.3;
+  filter: blur(30px);
+  transition: var(--transition-1);
+}
 
-.about-info .wrapper .item:hover {
-  background: #699198;
-  border-bottom: 5px solid rgb(71, 128, 71);
+.about-info .wrapper .item:hover::before {
+  height: 100%;
+  filter: blur(0px);
 }
 
 .about-info .wrapper .item h2 {
@@ -1045,13 +1091,14 @@ button {
   font-size: 0.9rem;
   color: var(--light-color-1);
   text-align: center;
-  line-height: 2.3;
+  line-height: 1.4;
+  padding: 5px;
 }
 
 /******** Company Values style ********/
 
 .about-values {
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   background: var(--bg-primary-clr);
   margin-top: -15px;
 }
@@ -1073,6 +1120,9 @@ button {
   .about-values .list-container .wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
+  .about-info .wrapper .item {
+    width: 100%;
+  }
 }
 .about-values .list-container .wrapper .list-item {
   background: #2f4f4f;
@@ -1085,7 +1135,7 @@ button {
 
 .list-item .heading .number {
   padding: 0.5rem 1rem;
-  background-color: #f56565;
+  background-color: var(--red-light-clr);
   color: white;
   border-radius: 9999px;
 }
@@ -1100,6 +1150,7 @@ button {
   padding: 12px 0;
   font-size: 1rem;
   color: #718096;
+  text-align: start;
 }
 
 @media (min-width: 768px) {
