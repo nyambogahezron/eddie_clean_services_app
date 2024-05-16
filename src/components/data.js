@@ -157,19 +157,24 @@ const servicesItems = [
 
   const countryDetails = {
     kenya: {
-      address: "Birendranagar 06, Kenya",
-      phone: ["+0098 9893 5647", "+0096 3434 5678"],
-      email: ["codinglab@gmail.com", "info.codinglab@gmail.com"],
+      address: `Limuru Nairobi,Lights Mombasa,Sinai Eldoret ,Amalemba Kakamega `,
+      phone:["+542706939187"],
+      email: ["eddiecleans@gmail.com"],
     },
     uganda: {
-      address: "Birendranagar 06, Uganda",
-      phone: ["+0098 9893 5647", "+0096 3434 5678"],
-      email: ["codinglab@gmail.com", "info.codinglab@gmail.com"],
+      address: ` Owino mrkt kampala,Njeru Jinja,Bibia Nimule Elegy border.`,
+      phone: ["+542706939187"],
+      email: ["eddiecleans@gmail.com"],
     },
     tanzania: {
-      address: "Birendranagar 06, Tanzania",
-      phone: ["+0098 9893 5647", "+0096 3434 5678"],
-      email: ["codinglab@gmail.com", "info.codinglab@gmail.com"],
+      address: `Kisessa Mwanza , Bunda,Isebania Tarime`,
+      phone: ["+542706939187"],
+      email: ["eddiecleans@gmail.com"],
+    },
+    sudan: {
+      address: `Thongpiny Juba south sudan,Bor south sudan.`,
+      phone: ["+542706939187"],
+      email: ["eddiecleans@gmail.com"],
     },
   };
 

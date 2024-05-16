@@ -4,10 +4,10 @@ const pricingTables = [
     type: "basic",
     price: 29,
     features: [
-      { name: "One Selected Template", included: true },
-      { name: "100% Responsive Design", included: true },
-      { name: "Credit Remove Permission", included: false },
-      { name: "Lifetime Template Updates", included: false },
+      { name: "Single Room Cleaning", included: true },
+      { name: "100% Surface Sanitization", included: true },
+      { name: "Specialized Stain Removal", included: false },
+      { name: "Quarterly Deep Cleans", included: false },
     ],
   },
   {
@@ -15,10 +15,10 @@ const pricingTables = [
     type: "premium",
     price: 59,
     features: [
-      { name: "Five Existing Templates", included: true },
-      { name: "100% Responsive Design", included: true },
-      { name: "Credit Remove Permission", included: true },
-      { name: "Lifetime Template Updates", included: false },
+      { name: "Whole House Cleaning", included: true },
+      { name: "100% Surface Sanitization", included: true },
+      { name: "Specialized Stain Removal", included: true },
+      { name: "Quarterly Deep Cleans", included: false },
     ],
   },
   {
@@ -26,10 +26,10 @@ const pricingTables = [
     type: "ultimate",
     price: 99,
     features: [
-      { name: "All Existing Templates", included: true },
-      { name: "100% Responsive Design", included: true },
-      { name: "Credit Remove Permission", included: true },
-      { name: "Lifetime Template Updates", included: true },
+      { name: "Commercial Building Cleaning", included: true },
+      { name: "100% Surface Sanitization", included: true },
+      { name: "Specialized Stain Removal", included: true },
+      { name: "Quarterly Deep Cleans", included: true },
     ],
   },
 ];

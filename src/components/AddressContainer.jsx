@@ -26,7 +26,13 @@ const AddressContainer = () => {
             </div>
             <div className='info'>
               <div className='topic'>Address</div>
-              <div>{countryDetails[activeTab].address}</div>
+              <div className="addresses">
+                {countryDetails[activeTab].address
+                  .split(",")
+                  .map((address, index) => (
+                    <li key={index}>{address}</li>
+                  ))}
+              </div>
             </div>
           </div>
           <div className='details'>
