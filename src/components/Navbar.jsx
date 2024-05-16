@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <h2 className='logo'>
-        <Link to='/'>EddieClean</Link>
+        <Link to='/'><img src="/logo-2.png" alt="" /></Link>
       </h2>
       <input
         type='checkbox'

@@ -87,7 +87,7 @@ const AboutUsInfo = () => {
         <div className='about-right'>
           <div className='about-left-content'>
             <div className='img'>
-              <img src='/img-4.jpg' alt='about image' />
+              <img src='/items-imgs/img-4.jpg' alt='about image' />
             </div>
           </div>
         </div>

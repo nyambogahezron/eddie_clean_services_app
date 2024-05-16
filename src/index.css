@@ -139,7 +139,7 @@ section {
   text-transform: capitalize;
 }
 
-.title h1::before {
+.title:not(.single-page-header .title) h1::before {
   position: absolute;
   content: "";
   background: var(--red-light-clr);
@@ -475,16 +475,18 @@ button {
   padding: 20px 10px;
 }
 
-.navbar .logo a {
-  font-size: 1.8rem;
-  color: var(--white);
+.navbar .logo img {
+  top: -25px;
+  position: absolute;
   opacity: 1;
-  font-family: cursive;
+  height: 150px;
+  width: 150px;
 }
 .navbar .logo a:hover {
   color: var(--tertiary-clr);
   opacity: 0.8;
 }
+
 .navbar .links {
   display: flex;
   align-items: center;
@@ -785,6 +787,11 @@ button {
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 630px) {
+  .navbar .logo img {
+    height: 100px;
+    width: 100px;
+    top: -10px;
+  }
   .hero-panel .wrapper {
     margin: 0;
     max-width: 100%;
@@ -1434,26 +1441,7 @@ button {
   justify-content: space-between;
   margin-bottom: 40px;
 }
-.custom-shape-divider-top-1715816717 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: -10;
-}
 
-.custom-shape-divider-top-1715816717 svg {
-  position: relative;
-  display: block;
-  width: calc(123% + 1.3px);
-  height: 75px;
-}
-
-.custom-shape-divider-top-1715816717 .shape-fill {
-  fill: #10182f;
-}
 .custom-shape-divider-top-1715818423 {
   position: absolute;
   bottom: 0;
@@ -2210,26 +2198,28 @@ footer .footer-row {
   position: relative;
   top: 0;
   width: 100%;
-  height: 200px;
+  height: 400px;
   display: flex;
   margin-bottom: 30px;
   align-items: center;
+  background-position:top;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
   transition: var(--transition-1);
+  opacity: 0.7;
   background: url("/img-1.jpg");
-  background-position: center;
-  transition: var(--transition-1);
-  opacity: 0.9;
 }
 .single-page-header::after {
   content: "";
+  background: url("/header.png");
   position: absolute;
   height: 100%;
   width: 100%;
-  background: var(--bg-primary-clr);
   bottom: 0;
   top: 0;
   margin: auto;
-  opacity: 0.2;
+  opacity: 0.4;
   z-index: -99;
 }
 .single-page-header .wrapper {
@@ -2243,11 +2233,19 @@ footer .footer-row {
 }
 
 .single-page-header .wrapper .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-size: 25px;
   text-transform: capitalize;
   font-weight: 700;
-  color: var(--white);
+}
+
+.single-page-header .wrapper .title h1{
+  color: var(--dark-color);
+  margin-top: 30px;
+
 }
 .single-page-header .wrapper .title::after {
   content: "";
@@ -2303,7 +2301,7 @@ footer .footer-row {
 .single-page-nav .home-link svg {
   height: 25px;
   color: #4f1ade;
-  margin-bottom: -6px;
+  margin-bottom: -8px;
   font-weight: 700;
 }
 
