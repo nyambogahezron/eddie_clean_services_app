@@ -13,13 +13,14 @@ import {
 } from "../../components/pageDivider";
 
 const Home = () => {
+ 
   return (
     <div>
       <header className='header'>
         <Navbar />
       </header>
       <main>
-        <section className='home' id='home'>
+        <section className='home' id='home' >
           <div>
             <HeroSection />
           </div>
@@ -27,24 +28,22 @@ const Home = () => {
             <HeroBottom />
           </div>
         </section>
-        <section id='aboutUs'>
-          {/* curve shape */}
+        <section id='aboutUs' >
           <AboutPageDivider />
           <AboutUsInfo />
         </section>
-        <section className='services' id='services'>
+        <section className='services' id='services' >
           <ServicesPageDivider />
           <div className='section-title'>
             <PageTitle text='Our Services' />
           </div>
           <ServicesInfo />
         </section>
-        <section className='pricing' id='pricing'>
+        <section className='pricing' id='pricing' >
           <div>
             <PageTitle text=' our pricing' />
           </div>
           <PricingInfo />
-
           <PricingPageDivider />
         </section>
         <section className='contact' id='contact'>

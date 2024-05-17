@@ -8,7 +8,7 @@ const HeroSection = () => {
           <span>&nbsp; clean</span>
           <span>&nbsp; services</span>
         </h2>
-        <p className="fade-up">
+        <p className='fade-up'>
           Welcome to Eddie Clean Services, where we transform your space into a
           pristine sanctuary. Our professional team specializes in meticulous
           cleaning services tailored to your needs. With eco-friendly practices
